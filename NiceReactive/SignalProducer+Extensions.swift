@@ -37,6 +37,10 @@ public func asString(_ value: Any?) -> String? {
     return value as? String
 }
 
+public func asDate(_ value: Any?) -> Date? {
+    return value as? Date
+}
+
 public func asNSSet(_ value: Any?) -> NSSet? {
     return value as? NSSet
 }
