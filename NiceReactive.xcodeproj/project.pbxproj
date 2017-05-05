@@ -12,6 +12,7 @@
 		991E7B151EB066EF0086A9D9 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 991E7B121EB066EF0086A9D9 /* ReactiveCocoa.framework */; };
 		991E7B161EB066EF0086A9D9 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 991E7B131EB066EF0086A9D9 /* ReactiveSwift.framework */; };
 		991E7B171EB066EF0086A9D9 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 991E7B141EB066EF0086A9D9 /* Result.framework */; };
+		99B026DF1EBCA54300533FE3 /* ReactiveSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B026DE1EBCA54300533FE3 /* ReactiveSelect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		991E7B121EB066EF0086A9D9 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/Mac/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		991E7B131EB066EF0086A9D9 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/Mac/ReactiveSwift.framework; sourceTree = "<group>"; };
 		991E7B141EB066EF0086A9D9 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/Mac/Result.framework; sourceTree = "<group>"; };
+		99B026DE1EBCA54300533FE3 /* ReactiveSelect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveSelect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				991E7B081EB0654C0086A9D9 /* NiceReactive.h */,
 				991E7B091EB0654C0086A9D9 /* Info.plist */,
 				991E7B101EB066D60086A9D9 /* SignalProducer+Extensions.swift */,
+				99B026DE1EBCA54300533FE3 /* ReactiveSelect.swift */,
 			);
 			path = NiceReactive;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99B026DF1EBCA54300533FE3 /* ReactiveSelect.swift in Sources */,
 				991E7B111EB066D60086A9D9 /* SignalProducer+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
