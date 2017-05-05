@@ -17,10 +17,10 @@ protocol SelectOptionValue: Equatable {
 extension SelectOptionValue {
 }
 
-class ReactiveSelect<T: Equatable>: NSObject {
+public class ReactiveSelect<T: Equatable>: NSObject {
     
     let button: NSPopUpButton
-    var label: ((T) -> (String))?
+    public var label: ((T) -> (String))?
     let allowsNone: Bool
     var noneLabel = "-"
     
@@ -52,21 +52,21 @@ class ReactiveSelect<T: Equatable>: NSObject {
         }
     }
     
-    var rac_options: BindingTarget<[Option]> {
+    public var rac_options: BindingTarget<[Option]> {
         return reactive.makeBindingTarget {
             $0.options = $1
             $0.updateSelectFromSelectedValue()
         }
     }
     
-    var rac_values: BindingTarget<[T]> {
+    public var rac_values: BindingTarget<[T]> {
         return reactive.makeBindingTarget {
             $0.options = $1.map { (value: $0, label: self.label?($0) ?? "label") }
             $0.updateSelectFromSelectedValue()
         }
     }
     
-    var selectedValue: T? {
+    public var selectedValue: T? {
         didSet {
             self.updateSelectFromSelectedValue()
         }
