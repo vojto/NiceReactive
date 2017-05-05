@@ -22,23 +22,23 @@ public class ReactiveSelect<T: Equatable>: NSObject {
     let button: NSPopUpButton
     public var label: ((T) -> (String))?
     let allowsNone: Bool
-    var noneLabel = "-"
+    public var noneLabel = "-"
     
     internal typealias Option = (value: T?, label: String)
     
-    init(button: NSPopUpButton, allowsNone: Bool = false) {
+    public init(button: NSPopUpButton, allowsNone: Bool = false) {
         self.button = button
         self.allowsNone = allowsNone
     }
     
-    var onChange: ((T?) -> ())? {
+    public var onChange: ((T?) -> ())? {
         didSet {
             button.target = self
             button.action = #selector(handleButtonAction(sender:))
         }
     }
     
-    var options = [Option]() {
+    public var options = [Option]() {
         didSet {
             if allowsNone {
                 options.insert((value: nil, label: noneLabel), at: 0)
@@ -82,7 +82,7 @@ public class ReactiveSelect<T: Equatable>: NSObject {
         }
     }
     
-    var rac_selectedValue: BindingTarget<T?> {
+    public var rac_selectedValue: BindingTarget<T?> {
         return reactive.makeBindingTarget { base, value in
             base.selectedValue = value
         }
